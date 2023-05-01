@@ -24,12 +24,20 @@ namespace DigitalStore
             wishlist.Add(item);
         }
 
+        public ShoppingCart cart;
+
+        public ProductReview review;
+
+        public Order order;
+
     }
 
     public class ProductReview
     {
         public float stars;
         public string comment;
+
+        public Product product;
         public bool addStars()
         {
             return true;
@@ -46,6 +54,8 @@ namespace DigitalStore
     {
 
         private float totalPrice;
+
+        public Product product;
 
         Dictionary<Product, int> productDictionary = new Dictionary<Product, int>();
 
@@ -71,6 +81,8 @@ namespace DigitalStore
         public DateTime orderDate;
         public int quantity;
         public float finalPrice;
+
+        public Product product;
 
         public bool getOrderDetails()
         {
